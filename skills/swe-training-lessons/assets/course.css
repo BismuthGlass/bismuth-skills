@@ -1,0 +1,161 @@
+:root {
+  --accent:   #4f7dbd;
+  --accent-dark: #2f5a94;
+  --bg:       #f9f9fb;
+  --surface:  #ffffff;
+  --border:   #dde1ea;
+  --text:     #1e2128;
+  --muted:    #5a6170;
+  --code-bg:  #eef1f7;
+  --hint-bg:  #f0f5ff;
+  --radius:   6px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-size: 18px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  font-family: system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 5rem;
+}
+
+/* ── Typography ── */
+
+h1, h2, h3, h4 {
+  line-height: 1.25;
+  font-weight: 700;
+  margin-top: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-dark);
+}
+
+h1 { font-size: 2rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.35rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.1rem; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+
+p { margin: 0.8rem 0; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+strong { color: var(--accent-dark); }
+
+/* ── Code ── */
+
+code {
+  font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", ui-monospace, monospace;
+  font-size: 0.85em;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.1em 0.35em;
+}
+
+pre {
+  background: #1e2128;
+  color: #abb2bf;
+  border-radius: var(--radius);
+  padding: 1.1rem 1.3rem;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.88rem;
+  color: inherit;
+}
+
+/* ── Tables ── */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.2rem 0;
+  font-size: 0.95rem;
+}
+
+th {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.55rem 0.8rem;
+}
+
+td {
+  padding: 0.5rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+}
+
+tr:nth-child(even) td { background: var(--code-bg); }
+
+/* ── Hints (details/summary) ── */
+
+details {
+  background: var(--hint-bg);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 0.6rem 1rem;
+  margin: 0.6rem 0;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--accent-dark);
+  user-select: none;
+  list-style: none;
+}
+
+summary::before {
+  content: "▶ ";
+  font-size: 0.75em;
+}
+
+details[open] summary::before { content: "▼ "; }
+
+details[open] { padding-bottom: 0.9rem; }
+
+/* ── Horizontal rule ── */
+
+hr {
+  border: none;
+  border-top: 2px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+/* ── Blockquote ── */
+
+blockquote {
+  border-left: 4px solid var(--accent);
+  margin: 1rem 0;
+  padding: 0.4rem 1rem;
+  color: var(--muted);
+  background: var(--hint-bg);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* ── Navigation (chunked HTML prev/next) ── */
+
+nav#TOC {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.4rem;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+nav#TOC ul { padding-left: 1.2rem; margin: 0.3rem 0; }
+nav#TOC li { margin: 0.2rem 0; }
