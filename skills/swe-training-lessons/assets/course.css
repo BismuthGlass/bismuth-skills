@@ -76,6 +76,19 @@ pre code {
   color: inherit;
 }
 
+/* Pandoc syntax highlight tokens for dark code blocks */
+pre code .va { color: #d7ba7d; } /* variable */
+pre code .bu { color: #98d98e; } /* built-in */
+pre code .at { color: #9cdcfe; } /* attribute */
+pre code .fu { color: #4fc1ff; } /* function */
+pre code .st { color: #ce9178; } /* string */
+pre code .dv,
+pre code .bn,
+pre code .fl { color: #b5cea8; } /* numbers */
+pre code .kw,
+pre code .cf { color: #c586c0; } /* keywords/control flow */
+pre code .co { color: #8a94a8; } /* comments */
+
 /* ── Tables ── */
 
 table {
